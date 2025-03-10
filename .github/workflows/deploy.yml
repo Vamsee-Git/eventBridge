@@ -5,10 +5,13 @@ on:
   workflow_dispatch:
  
 env:
-
   AWS_REGION: "us-east-1"
-
   TF_VERSION: "1.5.0"
+  
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
  
 jobs:
 
@@ -36,6 +39,13 @@ jobs:
         with:
 
           terraform_version: ${{ env.TF_VERSION }}
+      # AWS credentials      
+      - name: Configure AWS credentials using OIDC
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: arn:aws:iam::664418994073:role/eventBridge-github
+          aws-region: ap-south-1
+          id-token: true
  
       # Initialize Terraform
 
