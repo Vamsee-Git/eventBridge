@@ -1,5 +1,5 @@
 resource "aws_api_gateway_rest_api" "this" {
-  name = "my_usecase9_api_1"
+  name = "myApi_SQS"
 }
 
 resource "aws_api_gateway_resource" "this" {
