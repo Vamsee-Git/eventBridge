@@ -2,17 +2,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-terraform {
-  backend "s3" {
-    bucket         = "vamsi1-terraform-bucket"
-    key            = "usecase9/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-  }
-}
-
-
-
 module "eventbridge" {
   source = "./modules/eventbridge"
   #sqs_queues = module.sqs.sqs_queues
