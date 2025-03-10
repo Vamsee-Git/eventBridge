@@ -1,9 +1,9 @@
 resource "aws_sqs_queue" "gold" {
-  name = "sqs-gold1"
+  name = "sqs-gold"
 }
 
 resource "aws_sqs_queue" "silver" {
-  name = "sqs-silver1"
+  name = "sqs-silver"
 }
 
 resource "aws_cloudwatch_event_bus" "event_bus" {
