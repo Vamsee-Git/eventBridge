@@ -15,7 +15,7 @@ resource "aws_cloudwatch_event_rule" "rule1" {
   name = "Rule1"
   event_bus_name = aws_cloudwatch_event_bus.event_bus.name
   event_pattern = jsonencode({
-    "source": ["my_lambda_function_usecase9"],
+    "source": ["lambdaFunction_SQS"],
     "detail-type": ["client-details"],
     "detail": {
       "client-type": ["gold"]
