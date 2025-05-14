@@ -1,5 +1,5 @@
 aws_region = "us-west-2"
-#sqs_queue_names       = ["queue1", "queue2"]
+#sqs_queue_names       = ["queue1", "queue"]
 lambda_function_name  = "lambdaFunction_SQS"
 lambda_runtime        = "python3.13"
 event_bus_name        = "my_event_bus"
