@@ -9,3 +9,11 @@ variable "lambda_runtime" {
 variable "event_bus_arn" {
   type = string
 }
+
+variable "gold_queue_arn" {
+  type = string
+}
+variable "silver_queue_arn" {
+  type = string
+}
+
