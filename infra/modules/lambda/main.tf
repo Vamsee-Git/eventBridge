@@ -13,7 +13,7 @@ resource "aws_lambda_function" "this" {
 }
 
 resource "aws_iam_role" "lambda_exec" {
-  name = "lambda_exec_role"
+  name = "lambda_exec_role2"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
