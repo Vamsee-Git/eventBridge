@@ -6,6 +6,10 @@ resource "aws_lambda_function" "this" {
 
   source_code_hash = filebase64sha256("lambda_function_payload.zip")
   filename         = "lambda_function_payload.zip"
+
+  tracing_config {
+    mode = "Active"
+  }
 }
 
 resource "aws_iam_role" "lambda_exec" {
