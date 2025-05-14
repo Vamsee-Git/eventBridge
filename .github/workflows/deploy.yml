@@ -43,7 +43,7 @@ jobs:
       - name: Configure AWS credentials using OIDC
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: arn:aws:iam::664418994073:role/eventBridge-github
+          role-to-assume: arn:aws:iam::877786395093:role/github-oidc-vamsee
           aws-region: ap-south-1
           id-token: true
  
