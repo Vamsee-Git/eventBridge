@@ -48,10 +48,16 @@ resource "aws_iam_role_policy" "lambda_exec" {
         Action = "events:PutEvents",
         Effect = "Allow",
         Resource = var.event_bus_arn
+      },
+      {
+        Action = "sqs:SendMessage",
+        Effect = "Allow",
+        Resource = var.sqs_queue_arn
       }
     ]
   })
 }
+
 
 output "lambda_function_arn" {
   value = aws_lambda_function.this.arn
