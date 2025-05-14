@@ -52,7 +52,12 @@ resource "aws_iam_role_policy" "lambda_exec" {
       {
         Action = "sqs:SendMessage",
         Effect = "Allow",
-        Resource = var.sqs_queue_arn
+        Resource = var.gold_queue_arn
+      }
+      {
+        Action = "sqs:SendMessage",
+        Effect = "Allow",
+        Resource = var.silver_queue_arn
       }
     ]
   })
