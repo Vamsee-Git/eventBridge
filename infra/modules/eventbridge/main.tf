@@ -56,3 +56,9 @@ resource "aws_cloudwatch_event_target" "this2" {
 output "event_bus_arn" {
   value = aws_cloudwatch_event_bus.event_bus.arn
 }
+output "gold_queue_arn" {
+  value = aws_sqs_queue.gold.arn
+}
+output "silver_queue_arn" {
+  value = aws_sqs_queue.silver.arn
+}
