@@ -13,6 +13,8 @@ module "lambda" {
   event_bus_arn = module.eventbridge.event_bus_arn
   lambda_runtime = var.lambda_runtime
   lambda_function_name = var.lambda_function_name
+  gold_queue_arn      = module.eventbridge.gold_queue_arn
+  silver_queue_arn      = module.eventbridge.silver_queue_arn
 
 }
 
